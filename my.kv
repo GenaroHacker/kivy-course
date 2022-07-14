@@ -1,29 +1,15 @@
-<MyGrid>
+<Button>:
+    font_size:40
+    color:0.3,0.6,0.7,1
+    size_hint:0.3,0.5
 
-    name: name
-    email: email
-
-    GridLayout:
-        cols:1
-        size: root.width, root.height
-
-        GridLayout:
-            cols:2
-
-            Label:
-                text: "Name: "
-
-            TextInput:
-                id: name
-                multiline:False
-
-            Label:
-                text: "Email: "
-
-            TextInput:
-                id: email
-                multiline: False
-
-        Button:
-            text: "Submit"
-            on_press:root.btn()
+<FloatLayout>:
+    Button:
+        pos_hint:{"x":0.5, "top":1}
+        text: 'Tech with'
+    
+    Button:
+        id:btn
+        pos_hint:{"x":0.5, "top":0.5}
+        text: 'Tim' if btn.state == "normal" else "Down"
+        background_color: 0.3,0.6,0.7,1
